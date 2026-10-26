@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Image as ImageIcon, Sparkles, Github, ShieldCheck, Zap } from 'lucide-react';
+import { Image as ImageIcon, Sparkles, ShieldCheck, Zap } from 'lucide-react';
+import { TOOLS_LIST } from './ToolsData';
 
 interface NavbarProps {
-  onSelectTool?: (toolId: string) => void;
+  onSelectTool?: (slug: string) => void;
 }
 
 export default function Navbar({ onSelectTool }: NavbarProps) {
@@ -18,63 +19,48 @@ export default function Navbar({ onSelectTool }: NavbarProps) {
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold tracking-tight bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
-              ToolImg
+              ToolImg AI
             </span>
             <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase -mt-1">
-              Pro Image Suite
+              Smart Vision Hub
             </span>
           </div>
         </a>
 
         {/* Zone 2: Navigation Links */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
-          <button 
-            onClick={() => onSelectTool?.('compressor')}
-            className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
-          >
-            Compressor
-          </button>
-          <button 
-            onClick={() => onSelectTool?.('resizer')}
-            className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
-          >
-            Resizer
-          </button>
-          <button 
-            onClick={() => onSelectTool?.('converter')}
-            className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
-          >
-            Converter
-          </button>
-          <button 
-            onClick={() => onSelectTool?.('watermark')}
-            className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
-          >
-            Watermark
-          </button>
-          <button 
-            onClick={() => onSelectTool?.('pdf')}
-            className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
-          >
-            Images to PDF
-          </button>
+          <a href="/tools/image-to-code" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
+            Image to Code
+          </a>
+          <a href="/tools/handwriting-to-text" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
+            Handwriting to Text
+          </a>
+          <a href="/tools/html-to-image" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
+            HTML to Image
+          </a>
+          <a href="/tools/hindi-handwriting-to-text" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
+            Hindi OCR
+          </a>
+          <a href="/tools/gemini-image-to-prompt" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
+            Image to Prompt
+          </a>
         </nav>
 
         {/* Zone 3: Primary Action */}
         <div className="flex items-center gap-3 shrink-0">
           <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-xs font-medium border border-emerald-200/50 dark:border-emerald-800/50">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>100% Secure & Fast</span>
+            <span>Gemini Powered</span>
           </div>
           <button
             onClick={() => {
-              const el = document.getElementById('all-tools-section');
+              const el = document.getElementById('tools-section');
               el?.scrollIntoView({ behavior: 'smooth' });
             }}
             className="px-4 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-sm shadow-indigo-600/20 transition-all flex items-center gap-1.5 whitespace-nowrap shrink-0 cursor-pointer"
           >
             <Zap className="w-3.5 h-3.5" />
-            <span>Explore All Tools</span>
+            <span>Explore Tools</span>
           </button>
         </div>
       </div>
