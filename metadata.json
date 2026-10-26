@@ -1,0 +1,6 @@
+{
+  "name": "ToolImg - Multi Tool Image Editor & Converter",
+  "description": "Fast and secure online image tools: compressor, resizer, converter, watermark, crop, rotate, filters and image to PDF converter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
