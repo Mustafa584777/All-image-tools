@@ -1,0 +1,18 @@
+{
+  "runtime": "edge",
+  "name": "api/ai-tool",
+  "deploymentTarget": "v8-worker",
+  "entrypoint": "index.js",
+  "assets": [],
+  "framework": {
+    "slug": "nextjs",
+    "version": "15.5.28"
+  },
+  "environment": {
+    "__NEXT_BUILD_ID": "KiALbv3PsKcfXMTAa4ual",
+    "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "uw7IwOzmPfTEBrHEecisxokBA5psAGcn98OvmfEMvGA=",
+    "__NEXT_PREVIEW_MODE_ID": "8f72490ae349d125429a47eee0bf4d90",
+    "__NEXT_PREVIEW_MODE_SIGNING_KEY": "b327dac852ce28c5ad5d09ccc1e6cf0ecc34355f34635630ed79d04ef23300d6",
+    "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "a4765fa8f546c8cb8757fa28e549351a5024de83e70aa28ebb96ab52bf3d0f7d"
+  }
+}

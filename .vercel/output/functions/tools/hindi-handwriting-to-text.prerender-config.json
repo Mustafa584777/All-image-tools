@@ -1,0 +1,35 @@
+{
+  "type": "Prerender",
+  "expiration": false,
+  "sourcePath": "/tools/[slug]",
+  "group": 5,
+  "bypassToken": "8f72490ae349d125429a47eee0bf4d90",
+  "experimentalBypassFor": [
+    {
+      "type": "header",
+      "key": "next-action"
+    },
+    {
+      "type": "header",
+      "key": "content-type",
+      "value": "multipart/form-data;.*"
+    }
+  ],
+  "fallback": {
+    "type": "FileFsRef",
+    "mode": 33188,
+    "fsPath": "hindi-handwriting-to-text.prerender-fallback.html"
+  },
+  "initialHeaders": {
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+  },
+  "allowQuery": [],
+  "allowHeader": [
+    "host",
+    "x-matched-path",
+    "x-prerender-revalidate",
+    "x-prerender-revalidate-if-generated",
+    "x-next-revalidated-tags",
+    "x-next-revalidate-tag-token"
+  ]
+}
