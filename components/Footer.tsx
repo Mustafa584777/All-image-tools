@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Image as ImageIcon, Shield } from 'lucide-react';
 import { TOOLS_LIST } from './ToolsData';
 
@@ -30,9 +31,9 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               {TOOLS_LIST.map(tool => (
                 <li key={tool.id}>
-                  <a href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
+                  <Link href={`/tools/${tool.slug}`} className="hover:text-white transition-colors">
                     {tool.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

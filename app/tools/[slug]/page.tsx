@@ -171,7 +171,7 @@ export default function ToolPage() {
                   ) : (
                     <div className="space-y-4">
                       <div className="relative aspect-video rounded-2xl bg-slate-950 overflow-hidden flex items-center justify-center border border-slate-800">
-                        <img src={file.preview} alt="Upload preview" className="max-h-full max-w-full object-contain" />
+                        <img src={file.preview} alt="Upload preview" className="max-h-full max-w-full object-contain" referrerPolicy="no-referrer" />
                         <button
                           onClick={() => setFile(null)}
                           className="absolute top-3 right-3 px-3 py-1 bg-red-600 text-white rounded-lg text-xs font-medium hover:bg-red-700"

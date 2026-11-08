@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Image as ImageIcon, Sparkles, ShieldCheck, Zap } from 'lucide-react';
 import { TOOLS_LIST } from './ToolsData';
 
@@ -13,7 +14,7 @@ export default function Navbar({ onSelectTool }: NavbarProps) {
     <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
         {/* Zone 1: Brand Logo */}
-        <a href="/" className="flex items-center gap-2.5 text-slate-900 dark:text-white whitespace-nowrap shrink-0 group">
+        <Link href="/" className="flex items-center gap-2.5 text-slate-900 dark:text-white whitespace-nowrap shrink-0 group">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
             <ImageIcon className="w-5 h-5" />
           </div>
@@ -25,25 +26,25 @@ export default function Navbar({ onSelectTool }: NavbarProps) {
               Smart Vision Hub
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Zone 2: Navigation Links */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
-          <a href="/tools/image-to-code" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
+          <Link href="/tools/image-to-code" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
             Image to Code
-          </a>
-          <a href="/tools/handwriting-to-text" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
+          </Link>
+          <Link href="/tools/handwriting-to-text" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
             Handwriting to Text
-          </a>
-          <a href="/tools/html-to-image" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
+          </Link>
+          <Link href="/tools/html-to-image" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
             HTML to Image
-          </a>
-          <a href="/tools/hindi-handwriting-to-text" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
+          </Link>
+          <Link href="/tools/hindi-handwriting-to-text" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
             Hindi OCR
-          </a>
-          <a href="/tools/gemini-image-to-prompt" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
+          </Link>
+          <Link href="/tools/gemini-image-to-prompt" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0">
             Image to Prompt
-          </a>
+          </Link>
         </nav>
 
         {/* Zone 3: Primary Action */}
